@@ -10,14 +10,31 @@ https://github.com/coordcn/define/
 ## document
 
 ### 模块定义
-### @param id {string} 
-### @param deps {array[string]} ids
-### @param factory {function}
-###   function(require, exports, module){}
-### @param 
 ### define(id, deps, factory, [immediate]) 
 ### define(id, factory, [immediate])
+@param id {string} id参数必须提供，不支持匿名模块
+@param deps {array[string]} 模块依赖的id数组
+@param factory {function} function(require, exports, module){}
+@param immediate {boolean} 模块加载后是否立即执行，默认不立即执行
 
-### 模块使用 其实是模块定义的一个快捷方式
+建议书写形式
+
+```js
+
+(function(factory){
+  define('name',
+    [
+      'deps1',
+      'deps2'
+    ],
+    factory,
+    true
+  );
+})(function(require, exports, module){
+});
+
+```
+
+### 模块使用
 ### use(deps, callback) === define('somename', deps, callback, true)
 
