@@ -37,4 +37,5 @@ https://github.com/coordcn/define/
 
 ### 模块使用
 ### use(deps, callback) === define('somename', deps, callback, true)
-
+@param deps {array[string]} 模块依赖的id数组
+@param callback {function} function(require){}
