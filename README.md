@@ -12,10 +12,10 @@ https://github.com/coordcn/define/
 ### 模块定义
 ### define(id, deps, factory, [immediate]) 
 ### define(id, factory, [immediate])
-*@param id {string} id参数必须提供，不支持匿名模块
-*@param deps {array[string]} 模块依赖的id数组
-*@param factory {function} function(require, exports, module){}
-*@param immediate {boolean} 模块加载后是否立即执行，默认不立即执行
+* @param id {string} id参数必须提供，不支持匿名模块
+* @param deps {array[string]} 模块依赖的id数组
+* @param factory {function} function(require, exports, module){}
+* @param immediate {boolean} 模块加载后是否立即执行，默认不立即执行
 
 建议书写形式
 
@@ -37,5 +37,5 @@ https://github.com/coordcn/define/
 
 ### 模块使用
 ### use(deps, callback) === define('somename', deps, callback, true)
-*@param deps {array[string]} 模块依赖的id数组
-*@param callback {function} function(require){}
+* @param deps {array[string]} 模块依赖的id数组
+* @param callback {function} function(require){}
